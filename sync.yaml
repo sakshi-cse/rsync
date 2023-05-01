@@ -1,3 +1,4 @@
+---
 - name: Sync directory to remote server
   hosts: 13.235.133.1  
   become: false
