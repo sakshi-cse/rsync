@@ -1,0 +1,11 @@
+---
+- name: Sync directory to remote server
+  hosts: 13.235.133.1  
+  become: false
+  tasks:
+    - name: Copy directory using rsync
+      synchronize:
+        src: /var/www/html/angular-realworld-example-app/dist/
+        dest: /var/www/html/dist/
+        delete: yes
+        recursive: yes
